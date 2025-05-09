@@ -15,7 +15,7 @@ export default function Movies({ movies }) {
       {movies.map(movie => (
         <div key={movie.id}>
           <h3>{movie.title}</h3>
-          <Link href={`/movies/${movie.id}`}>View Details</Link>
+          <p>{movie.description}</p>
         </div>
       ))}
     </div>
