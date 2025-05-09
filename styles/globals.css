@@ -1,23 +1,23 @@
 /* Default light theme */
 :root {
-  --background: #ffffff; /* Light mode background */
-  --foreground: #171717; /* Light mode text color */
+  --background: #ffffff;
+  --foreground: #171717;
   --link-color: #0070f3;
 }
 
 /* Dark mode system preference */
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a; /* Dark mode background */
-    --foreground: #ededed; /* Dark mode text color */
+    --background: #0a0a0a;
+    --foreground: #ededed;
     --link-color: #ff4081;
   }
 }
 
 /* When the theme is set to dark mode via React Context API */
 body.dark {
-  --background: #0a0a0a; /* Dark mode background */
-  --foreground: #ededed; /* Dark mode text color */
+  --background: #0a0a0a;
+  --foreground: #ededed;
   --link-color: #ff4081;
 }
 
@@ -33,7 +33,7 @@ body {
 
 body {
   color: var(--foreground);
-  background: var(--background); /* Use CSS variable for background */
+  background: var(--background); /* Use CSS variables for background */
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

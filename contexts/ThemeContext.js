@@ -5,7 +5,7 @@ const ThemeContext = createContext();
 export function ThemeProvider({ children }) {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
-  // On page load, get the stored theme from localStorage
+  // On initial load, check if the theme is stored in localStorage
   useEffect(() => {
     const storedTheme = localStorage.getItem('theme');
     if (storedTheme) {
@@ -13,15 +13,15 @@ export function ThemeProvider({ children }) {
     }
   }, []);
 
-  // Apply the `dark` class to the body and save the theme to localStorage
+  // Add or remove the `dark` class from the body based on the `isDarkMode` state
   useEffect(() => {
     if (isDarkMode) {
-      document.body.classList.add('dark'); // Add dark class
+      document.body.classList.add('dark'); // Add the dark class
     } else {
-      document.body.classList.remove('dark'); // Remove dark class
+      document.body.classList.remove('dark'); // Remove the dark class
     }
-    
-    // Persist the theme in localStorage
+
+    // Store the current theme in localStorage
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
   }, [isDarkMode]);
 

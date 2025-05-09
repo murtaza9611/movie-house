@@ -22,8 +22,8 @@ export default function Home({ trendingMovies }) {
       <button
         onClick={toggleTheme}
         style={{
-          backgroundColor: isDarkMode ? '#333' : '#fff',
-          color: isDarkMode ? '#fff' : '#000',
+          backgroundColor: isDarkMode ? '#333' : '#fff',  // Dark background for dark mode
+          color: isDarkMode ? '#fff' : '#000',  // White text for dark mode
           padding: '10px 20px',
           borderRadius: '5px',
           cursor: 'pointer',
@@ -45,3 +45,4 @@ export default function Home({ trendingMovies }) {
     </div>
   );
 }
+
